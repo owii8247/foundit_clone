@@ -1,10 +1,11 @@
 require("dotenv").config();
 const express = require("express");
+const mongoose=require("mongoose")
 
 
 const app = express();
 const cors=require("cors")
-
+console.log(process.env.PORT)
 const PORT=process.env.PORT || 8080
 app.use(cors())
 app.use(express.json());
@@ -18,8 +19,29 @@ const {crudController}=require("./Routes/AdminCrud.route")
 
 
 
+
+
+
+// mongoose connect
+const connect = async () => {
+    try {
+      await mongoose.connect(process.env.MONGO_URL);
+      console.log("connected to momgodb");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  
+  // mongo disconnected
+  mongoose.connection.on("disconnected", () => {
+    console.log("mongodb disconnected");
+  });
+  // mongo connected
+  mongoose.connection.on("connected", () => {
+    console.log("mongodb connected");
+  });
 app.get("/", (req, res) => {
-  res.send("welcome to the jobkar app");
+  res.send("welcome to the  app");
 });
 
 
@@ -31,14 +53,9 @@ app.use("/registeredusers",crudController);
 
 
 app.listen(PORT, async () => {
+    connect()
+try{
+    console.log("Listening to PORT",PORT);
 
-  try {
-    await connection
-    console.log("Database Connection Successful")
 
-  } catch (err) {
-    console.log("Database Connection Failed")
-    console.log(err);
-  }
-  console.log("Listening to PORT",PORT);
 });
