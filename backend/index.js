@@ -37,7 +37,7 @@ app.listen(PORT, async () => {
     console.log("Database Connection Successful")
 
   } catch (err) {
-    console.log("Database Connection  Failed")
+    console.log("Database Connection Failed")
     console.log(err);
   }
   console.log("Listening to PORT",PORT);
