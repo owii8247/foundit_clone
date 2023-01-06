@@ -58,4 +58,9 @@ try{
     console.log("Listening to PORT",PORT);
 
 
+}catch(err){
+    console.log("port error")
+}
+
+
 });
