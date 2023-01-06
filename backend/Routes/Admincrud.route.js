@@ -3,6 +3,8 @@ const { userModel } = require("../Models/User.model")
 const crudController = Router()
 
 
+
+//
 crudController.delete("/:id", async (req, res) => {
     const id = req.params.id;
     try {
