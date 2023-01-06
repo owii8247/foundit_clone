@@ -15,7 +15,7 @@ const {connection}=require("./config/db")
 const {userController}=require("./Routes/User.route")
 const {adminController}=require("./Routes/Admin.route")
 const {jobController}=require("./Routes/Job.route")
-const {crudController}=require("./Routes/AdminCrud.route")
+const {crudController}=require("./Routes/Admincrud.route")
 
 
 
