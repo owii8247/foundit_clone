@@ -12,15 +12,53 @@ import {
   Input,
   Text,
   useDisclosure,
+  useToast,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { BsFacebook } from "react-icons/bs";
 import { AiFillLinkedin } from "react-icons/ai";
 
 const DrowerRegiser = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const toast = useToast();
   const btnRef = React.useRef();
+  const [data, setData] = useState({});
+  const handlechange = (e) => {
+    const { name, value } = e.target;
+
+    setData({
+      ...data,
+      [name]: value,
+    });
+
+
+  };
+  const handlesubmit = (e) => {
+    e.preventDefault();
+    console.log(data)
+    fetch("https://founditbackend-production.up.railway.app/user/signup", {
+      method: "POST",
+      body: JSON.stringify(data),
+
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        toast({
+          title: "post successfully.",
+          description: "data post on json server.",
+          status: "success",
+          duration: 9000,
+          isClosable: true,
+        });
+      })
+      .catch((err) => {
+        alert("Something went wrong ");
+      });
+  };
   return (
     <div>
       <Button
@@ -32,7 +70,6 @@ const DrowerRegiser = () => {
         bg={"#6e00be"}
         size="lg"
         _hover={{ bg: "#6e00be" }}
-        
       >
         Register with us
       </Button>
@@ -96,44 +133,79 @@ const DrowerRegiser = () => {
               </Text>
             </Box>
             <br />
-            <Box>
-              <FormLabel htmlFor="username">NAME</FormLabel>
-              <Input id="NAME" placeholder="Enter Name" size="lg" />
-            </Box>
-            <br />
-            <Box>
-              <FormLabel htmlFor="Email">Email</FormLabel>
-              <Input id="Email" placeholder="Enter Email" size="lg" />
-            </Box>
-            <br />
-            <Box>
-              <FormLabel htmlFor="Password">Password</FormLabel>
-              <Input id="Email" placeholder="Enter Password" size="lg" />
-            </Box>
-            <br />
-            <Box>
-              <FormLabel htmlFor="Mobile No">Mobile No</FormLabel>
-              <Input id="Mobile No" placeholder="Mobile No" size="lg" />
-            </Box>
-            <br />
-            <Box>
-              <FormLabel htmlFor="Mobile No">Work Status</FormLabel>
-              <Input placeholder=" Enter Work Experience" size="lg" />
-            </Box>
-            <br />
-            <Button
-              width="20%"
-              height="70px"
-              color="white"
-              bg={"#6e00be"}
-              size="lg"
-              _hover={{ bg: "#6e00be" }}
-            >
-              Register Me
-            </Button>
+            <form onSubmit={handlesubmit}>
+              <Box>
+                <FormLabel htmlFor="username">NAME</FormLabel>
+                <Input
+                  id="NAME"
+                  placeholder="Enter Name"
+                  type="text"
+                  size="lg"
+                  name="name"
+                  onChange={handlechange}
+                  required
+                />
+              </Box>
+              <br />
+              <Box>
+                <FormLabel htmlFor="Email">Email</FormLabel>
+                <Input
+                  placeholder="Enter Email"
+                  size="lg"
+                  name="email"
+                  onChange={handlechange}
+                  required
+                />
+              </Box>
+              <br />
+              <Box>
+                <FormLabel htmlFor="Password">Password</FormLabel>
+                <Input
+                  id="Email"
+                  placeholder="Enter Password"
+                  size="lg"
+                  name="password"
+                  onChange={handlechange}
+                  required
+                />
+              </Box>
+              <br />
+              <Box>
+                <FormLabel htmlFor="Mobile No">Mobile No</FormLabel>
+                <Input
+                  id="Mobile No"
+                  placeholder="Mobile No"
+                  size="lg"
+                  name="mobile"
+                  onChange={handlechange}
+                  required
+                />
+              </Box>
+              <br />
+              <Box>
+                <FormLabel htmlFor="Mobile No">Work Status</FormLabel>
+                <Input
+                  placeholder=" Enter Work Experience"
+                  size="lg"
+                  name="work_status"
+                  onChange={handlechange}
+                  required
+                />
+              </Box>
+              <br />
+              <Button
+                width="20%"
+                height="70px"
+                color="white"
+                bg={"#6e00be"}
+                size="lg"
+                _hover={{ bg: "#6e00be" }}
+                type="submit"
+              >
+                Register Me
+              </Button>
+            </form>
           </DrawerBody>
-
-          
         </DrawerContent>
       </Drawer>
     </div>
