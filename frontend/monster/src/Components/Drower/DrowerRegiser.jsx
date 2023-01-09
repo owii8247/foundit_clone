@@ -48,8 +48,9 @@ const DrowerRegiser = () => {
       .then((res) => res.json())
       .then((res) => {
         toast({
-          title: "post successfully.",
-          description: "data post on json server.",
+          position:"top",
+          title: "Registered successfully.",
+          description: "Thank you for registering in foundit.",
           status: "success",
           duration: 9000,
           isClosable: true,
