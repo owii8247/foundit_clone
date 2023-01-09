@@ -6,6 +6,7 @@ import Signup from '../Pages/Signup/Signup'
 import AdminLogin from '../Pages/AdminLogin/AdminLogin'
 import JobPage from '../Pages/JobPage/JobPage'
 import AdminDashboard from '../Pages/AdminDashboard/AdminDashboard'
+import JobDescription from '../Pages/JobPage/JobDescription/JobDescription'
 
 const AllRoutes = () => {
   return (
@@ -16,6 +17,7 @@ const AllRoutes = () => {
             <Route path="/user/signup" element={<Signup />}/>
             <Route path="/adminlogin" element={<AdminLogin />}/>
             <Route path="/jobs" element={<JobPage />}/>
+            <Route path="/jobs/:id" element={<JobDescription />}/>
             <Route path="/admindashboard" element={<AdminDashboard />}/>
         </Routes>
     </div>

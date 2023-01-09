@@ -9,7 +9,7 @@ const Search = () => {
     }
     return (
         <>
-            <Box backgroundColor={"#f7f2f9"}>
+            <Box backgroundColor={"#f7f2f9"} >
             <Flex justifyContent={"space-between"} border={"1px solid gray"} w={1000} margin={"auto"} borderRadius={"5px"} >
                 <Box width="40px" justifyContent={"center"} padding-left="15px" size={"55px"} display={"flex"} alignItems={"center"} color={"purple"}>
                     <FaSearch />
