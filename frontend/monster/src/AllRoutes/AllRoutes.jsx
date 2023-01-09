@@ -6,12 +6,18 @@ import Signup from '../Pages/Signup/Signup'
 import AdminLogin from '../Pages/AdminLogin/AdminLogin'
 import JobPage from '../Pages/JobPage/JobPage'
 import AdminDashboard from '../Pages/AdminDashboard/AdminDashboard'
+import Adminligin from '../Pages/AdminLogin/Adminligin'
+import Service from '../Pages/AdminLogin/Service'
+import Service1 from '../Pages/AdminLogin/Service1'
 
 const AllRoutes = () => {
   return (
     <div>
         <Routes>
             <Route path="/" element={<Home />}/>
+            <Route path="/adminlogin" element={<Adminligin/>}/>
+            <Route path="/service/:id" element={<Service />}/>
+            <Route path="/service1/:id" element={<Service1 />}/>
             <Route path="/user/login" element={<Login />}/>
             <Route path="/user/signup" element={<Signup />}/>
             <Route path="/adminlogin" element={<AdminLogin />}/>
