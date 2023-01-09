@@ -19,6 +19,7 @@ import {
   Text,
   Textarea,
   useDisclosure,
+  useToast,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { CgProfile } from "react-icons/cg";
@@ -33,6 +34,7 @@ import { Userlogin } from "../../Redux/auth/action";
 
 const DrowerLogin = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const toast = useToast();
   const token = useSelector((store) => store.authentication.data.token);
   console.log("token",token)
   const firstField = React.useRef();
@@ -50,6 +52,15 @@ const DrowerLogin = () => {
     e.preventDefault();
     console.log(usercred)
     dispatch(Userlogin(usercred));
+    toast({
+      position:"top",
+      title: " Sucessfully Loged In.",
+      description: "",
+      status: "success",
+      duration: 9000,
+      isClosable: true,
+    });
+    //
   };
   useEffect(() => {
     if (token
@@ -112,6 +123,7 @@ const DrowerLogin = () => {
                     required
                   />
                 </Box>
+                <br/>
 
                 <Button
                   colorScheme="teal"

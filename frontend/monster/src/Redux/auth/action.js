@@ -1,3 +1,4 @@
+import { useToast } from "@chakra-ui/react";
 import axios from "axios";
 import {
   AUTH_LOADING,
@@ -6,16 +7,18 @@ import {
   AUTH_LOG_OUT,
 } from "./actionTypes";
 
+
 // user login
 export const Userlogin = (logincred) => async (dispatch) => {
+  
   dispatch({ type: AUTH_LOADING });
-  console.log(logincred)
+ // console.log(logincred)
   try {
     let res = await axios.post("https://founditbackend-production.up.railway.app/user/login", logincred);
     console.log("res",res);
     dispatch({ type: AUTH_SUCCESS, payload: res.data.document.token
-
     });
+
   } catch (e) {
     dispatch({ type: AUTH_ERROR });
   }
