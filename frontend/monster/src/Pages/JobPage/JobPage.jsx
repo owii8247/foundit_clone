@@ -9,10 +9,10 @@ const JobPage = () => {
     <>
       <Filter />
       <Grid templateColumns='repeat(2,1fr)' pl={10} pr={10}>
-        <Box border={"1px solid green"}>
+        <Box >
         <JobPageLeft />
         </Box>
-        <Box border={"1px solid red"} >
+        <Box >
           <JobPageRight  />
           </Box>
         
