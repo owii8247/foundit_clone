@@ -9,6 +9,7 @@ import AdminDashboard from '../Pages/AdminDashboard/AdminDashboard'
 import Adminligin from '../Pages/AdminLogin/Adminligin'
 import Service from '../Pages/AdminLogin/Service'
 import Service1 from '../Pages/AdminLogin/Service1'
+import Userdetails from '../Components/Userdetails'
 
 const AllRoutes = () => {
   return (
@@ -16,6 +17,7 @@ const AllRoutes = () => {
         <Routes>
             <Route path="/" element={<Home />}/>
             <Route path="/adminlogin" element={<Adminligin/>}/>
+            <Route path="/Userdetails" element={<Userdetails/>}/>
             <Route path="/service/:id" element={<Service />}/>
             <Route path="/service1/:id" element={<Service1 />}/>
             <Route path="/user/login" element={<Login />}/>
