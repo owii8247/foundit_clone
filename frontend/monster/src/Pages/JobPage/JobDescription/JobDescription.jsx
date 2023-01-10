@@ -9,11 +9,12 @@ import { GiSkills } from "react-icons/gi"
 import { TbBooks } from "react-icons/tb"
 import { RiUserSettingsFill } from "react-icons/ri"
 import { TiShoppingBag } from "react-icons/ti"
+import {AiOutlineEye, AiOutlineSend} from "react-icons/ai"
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 
 const JobDescription = () => {
     const { id } = useParams()
-    console.log(id)
+    //console.log(id)
     const [searchParams] = useSearchParams()
     const job = useSelector((state) => state.AppReducer.job)
     const [jobData, setjobData] = useState("")
@@ -23,8 +24,8 @@ const JobDescription = () => {
     
 
     const colors = useColorModeValue(
-        ['red.50', 'teal.50', 'blue.50'],
-        ['red.900', 'teal.900', 'blue.900'],
+        ['#f9f7fb','#f9f7fb','#f9f7fb',],
+      [ '#f9f7fb','#f9f7fb','#f9f7fb'],
       )
       const [tabIndex, setTabIndex] = React.useState(0)
       const bg = colors[tabIndex]
@@ -49,7 +50,7 @@ const JobDescription = () => {
         }
         
     }, [id, job])
-    console.log("sjd",jobData)
+    //console.log("sjd",jobData)
 
     const handleBookmark = () => {
         toast({
@@ -65,7 +66,12 @@ const JobDescription = () => {
             <Box  border={"1px solid #6e00be"} textAlign={"start"} p={10} borderRadius={10} mb={5} key={jobData.id}>
                     <Text fontWeight={"semibold"}>{jobData.job_title}</Text>
                     <Box color={"gray"}>
-                    <Text >{jobData.company_name}</Text><br />
+                    <Flex justifyContent={"space-between"}>
+                    <Text><Image src={jobData.image} />{jobData.company_name}</Text>
+                    <Text>Job Id : {jobData._id}</Text>
+                    </Flex>
+                    <br />
+                    
                     <Flex gap={1}>
                     <FaUserTie />
                     <Text mt={-1}>{jobData.job_type}</Text>
@@ -83,6 +89,7 @@ const JobDescription = () => {
                     <Text mt={-1}>{jobData.experience} Years</Text>
                     </Flex>
                     <br />
+                    
                     <Flex  justifyContent={"space-between"}>
                         <Flex gap={1}>
                         <BiTime />
@@ -96,7 +103,8 @@ const JobDescription = () => {
                     </Box>
                     <Flex justifyContent={"space-between"} mt={5}>
                         <Box>
-                            <Button colorScheme='blue' color={"#6e00be"}  variant='outline'>{jobData.viewed}</Button>
+                            <Button colorScheme='blue' color={"#6e00be"}  variant='outline'><AiOutlineEye/>{jobData.viewed}</Button>
+                            <Button ml={5} colorScheme='blue' color={"#6e00be"}  variant='outline'><AiOutlineSend/>{jobData.applied} Applied</Button>
                             <Button ml={5} colorScheme='blue' color={"#6e00be"}  variant='outline'>Send Similar Jobs</Button>
                         </Box>
                         <Box>
@@ -139,6 +147,7 @@ const JobDescription = () => {
                     </Flex>
                     <Text >{jobData.functions}</Text> 
                     <br />
+                    
                     <Flex gap={2}>
                     <GiSkills />
                     <Text textDecoration={"underline"} mt={-1}>ROLES</Text>
@@ -151,6 +160,12 @@ const JobDescription = () => {
                     </Flex>
                     <Text >{jobData.experience} Years</Text>
                     <br />  
+                    <Flex gap={2}>
+                    <RiUserSettingsFill />
+                    <Text textDecoration={"underline"} mt={-1}>SKILLS</Text>
+                    </Flex>
+                    <Text >{jobData.skills}</Text> 
+                    <br />
                     <Flex gap={2}>
                     <TbBooks />
                     <Text textDecoration={"underline"} mt={-1}>EDUCATION</Text>

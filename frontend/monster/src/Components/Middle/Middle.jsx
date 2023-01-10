@@ -11,6 +11,7 @@ import { FiUpload } from "react-icons/fi"
 
 import { useDropzone } from 'react-dropzone'
 
+
 const Middle = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const onDrop = useCallback(acceptedFiles => {
@@ -18,6 +19,9 @@ const Middle = () => {
     }, []);
 
     const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
+
+
+   
     return (
         <>
             <Grid templateColumns='repeat(3, 1fr)' gap={12} backgroundColor={"#f7f2f9"}>
@@ -69,7 +73,7 @@ const Middle = () => {
                                 </ModalFooter>
                             </ModalContent>
                         </Modal>
-                        <Button color={"#6e00be"} variant={"outline"} colorScheme={"blue"}>Register</Button>
+                        <Button color={"#6e00be"} variant={"outline"} colorScheme={"blue"} >Register</Button>
                     </Flex>
                 </Box>
                 <Box>
