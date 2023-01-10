@@ -25,8 +25,9 @@ import {
         };
       }
       case AUTH_SUCCESS: {
-        if(payload.token){
-          localStorage.setItem("usertoken",payload.token)
+        //console.log("reducer",payload)
+        if(payload){
+          localStorage.setItem("usertoken",payload)
         }
         return {
           ...state,

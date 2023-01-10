@@ -16,6 +16,7 @@ export const Userlogin = (logincred) => async (dispatch) => {
   try {
     let res = await axios.post("https://founditbackend-production.up.railway.app/user/login", logincred);
     console.log("res",res);
+    localStorage.setItem("username",res.data.document.name)
     dispatch({ type: AUTH_SUCCESS, payload: res.data.document.token
     });
 
