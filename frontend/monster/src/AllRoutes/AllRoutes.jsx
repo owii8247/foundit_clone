@@ -11,6 +11,8 @@ import Adminligin from '../Pages/AdminLogin/Adminligin'
 import Service from '../Pages/AdminLogin/Service'
 import Service1 from '../Pages/AdminLogin/Service1'
 import Userdetails from '../Components/Userdetails'
+import JobsData from '../Pages/AdminDashboard/JobsData'
+import Userdata from '../Pages/AdminDashboard/Userdata'
 
 
 const AllRoutes = () => {
@@ -28,6 +30,8 @@ const AllRoutes = () => {
             <Route path="/jobs" element={<JobPage />}/>
             <Route path="/jobs/:id" element={<JobDescription />}/>
             <Route path="/admindashboard" element={<AdminDashboard />}/>
+            <Route path="/jobsdata" element={<JobsData/>}/>
+            <Route path="/userdata" element={<Userdata/>}/>
         </Routes>
     </div>
   )
