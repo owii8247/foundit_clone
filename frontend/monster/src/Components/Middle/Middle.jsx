@@ -1,4 +1,8 @@
-import { Box, Button, Flex, Grid, Heading, Image, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, useDisclosure } from '@chakra-ui/react'
+import {
+    Box, Button, Flex, Grid, Heading, Image,
+    Modal, ModalBody, ModalCloseButton, ModalContent,
+    ModalFooter, ModalHeader, ModalOverlay, Text, useDisclosure
+} from '@chakra-ui/react'
 import React, { useCallback } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -8,9 +12,7 @@ import "swiper/css/bundle";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import { Link } from 'react-router-dom';
 import { FiUpload } from "react-icons/fi"
-
 import { useDropzone } from 'react-dropzone'
-
 
 const Middle = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -21,7 +23,7 @@ const Middle = () => {
     const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
 
-   
+
     return (
         <>
             <Grid templateColumns='repeat(3, 1fr)' gap={12} backgroundColor={"#f7f2f9"}>
@@ -48,21 +50,21 @@ const Middle = () => {
                             <ModalOverlay />
                             <ModalContent>
                                 <ModalHeader>Upload Resume</ModalHeader>
-                                
+
                                 <ModalCloseButton />
                                 <ModalBody>
                                     <Box {...getRootProps()}>
                                         <input {...getInputProps()} />
-                                        {isDragActive ? 'Drop the files here' :  <>
+                                        {isDragActive ? 'Drop the files here' : <>
 
-                                        <Box border={"1px dashed gray"} p={10} >
-                                            <Heading fontSize={"md"} color={"gray"} textAlign={"center"}>Drag and drop</Heading><br />
-                                            <Box ml={14}>
-                                            <Button color={"#6e00be"} variant={"outline"} colorScheme={"blue"} textAlign={"center"}>Select files to upload</Button>
-                                            <Text fontSize={"xs"}>*doc, docx, txt, pdf -MAX 6MB</Text>
+                                            <Box border={"1px dashed gray"} p={10} >
+                                                <Heading fontSize={"md"} color={"gray"} textAlign={"center"}>Drag and drop</Heading><br />
+                                                <Box ml={14}>
+                                                    <Button color={"#6e00be"} variant={"outline"} colorScheme={"blue"} textAlign={"center"}>Select files to upload</Button>
+                                                    <Text fontSize={"xs"}>*doc, docx, txt, pdf -MAX 6MB</Text>
+                                                </Box>
                                             </Box>
-                                        </Box>
-                                        
+
                                         </>}
                                     </Box>
 
@@ -73,7 +75,7 @@ const Middle = () => {
                                 </ModalFooter>
                             </ModalContent>
                         </Modal>
-                        <Button color={"#6e00be"} variant={"outline"} colorScheme={"blue"} >Register</Button>
+                        <Button color={"white"} backgroundColor={"#6e00be"} _hover={{backgroundColor:"#6e00be"}} colorScheme={"blue"} >Register Now</Button>
                     </Flex>
                 </Box>
                 <Box>
@@ -178,6 +180,7 @@ const Middle = () => {
                 </Box>
             </Box>
             <Box p={10}>
+
                 <Grid templateColumns='repeat(5, 1fr)' gap={6}>
                     <Box borderRadius={10} border={"1px solid gray"} p={2} backgroundColor={"#fff8eb"}>
                         <Image src="https://media.foundit.in/trex/public/theme_3/src/assets/images/landing-page/banner-section/scammers.svg" />
@@ -219,6 +222,7 @@ const Middle = () => {
                         </Box>
                     </Box>
                 </Grid>
+
             </Box>
         </>
     )
