@@ -5,6 +5,7 @@ import Middle from '../../Components/Middle/Middle'
 const Home = () => {
   return (
     <div>
+
       <Search />
       <Middle />
     </div>
