@@ -12,9 +12,12 @@ import React, { useState } from "react";
 import styles from "./AdminLogin.module.css";
 import aimage from "../../image/founditimage.jpg";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CoreService from "./CoreService";
 import Better from "./Better";
+import AdminDashboard from "../AdminDashboard/AdminDashboard";
+import Navbar from "../../Components/Navbar";
+import Footer from "../../Components/Footer";
 
 const Adminligin = () => {
   const toast = useToast();
@@ -31,7 +34,7 @@ const Adminligin = () => {
   const handlesubmit = (e) => {
     e.preventDefault();
     //console.log(usercred)
-    if (usercred.email == "admin@gmail.com" && usercred.password == "masai") {
+    if (usercred.email === "admin@gmail.com" && usercred.password === "admin") {
       toast({
         position: "top",
         title: " Sucessfully Loged In.",
@@ -40,7 +43,10 @@ const Adminligin = () => {
         duration: 9000,
         isClosable: true,
       });
-      navigate("/admindashboard");
+    navigate("/admindashboard")
+ 
+
+      
     } else {
       //alert("login failed");
       toast({
@@ -57,6 +63,7 @@ const Adminligin = () => {
   };
   return (
     <div>
+      <Navbar/> 
       <div className={styles.admain}>
         <div className={styles.admin1}>
           <Image src={aimage} height="100%" width={"100%"} />
@@ -94,6 +101,7 @@ const Adminligin = () => {
                 width="100%"
                 type="submit"
                 mt="20px"
+
               >
                 Login
               </Button>
@@ -126,6 +134,7 @@ const Adminligin = () => {
           </TabPanels>
         </Tabs>
       </div>
+      <Footer/>
     </div>
   );
 };

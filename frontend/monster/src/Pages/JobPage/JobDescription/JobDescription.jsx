@@ -11,6 +11,8 @@ import { RiUserSettingsFill } from "react-icons/ri"
 import { TiShoppingBag } from "react-icons/ti"
 import { AiOutlineEye, AiOutlineSend } from "react-icons/ai"
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
+import Navbar from '../../../Components/Navbar'
+import Footer from '../../../Components/Footer'
 
 const JobDescription = () => {
     const { id } = useParams()
@@ -74,8 +76,14 @@ const JobDescription = () => {
 
     return (
         <>
+
+         <Navbar/>
+        <Box w={1000} p={10}>
+            <Box  border={"1px solid #6e00be"} textAlign={"start"} p={10} borderRadius={10} mb={5} key={jobData.id}>
+
             <Box w={1000} p={10}>
                 <Box border={"1px solid #6e00be"} textAlign={"start"} p={10} borderRadius={10} mb={5} key={jobData.id}>
+
                     <Text fontWeight={"semibold"}>{jobData.job_title}</Text>
                     <Box color={"gray"}>
                         <Flex justifyContent={"space-between"}>
@@ -199,6 +207,10 @@ const JobDescription = () => {
                     </Tabs>
 
                 </Box>
+
+                </Box>
+               
+
             </Box>
 
 
@@ -248,6 +260,8 @@ const JobDescription = () => {
                 </Grid>
 
             </Box>
+             <Footer/>
+
 
 
         </>
