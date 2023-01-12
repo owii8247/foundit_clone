@@ -10,9 +10,9 @@
    <img src ="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" align="center" alt="javascript">
    <img src = "https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" align="center" alt="css3">
    <img src = "https://img.shields.io/badge/chakra ui-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white" align="center" alt="chakra-ui"/>
-   <img src = "https://img.shields.io/badge/mongo%20db-%234ED1C5.svg?style=for-the-badge&logo=mongodb&logoColor=white" align="center" alt="mongo-db"/>
-   <img src = "https://img.shields.io/badge/node%20js-%234ED1C5.svg?style=for-the-badge&logo=nodejs&logoColor=white" align="center" alt="node-js"/>
-   <img src = "https://img.shields.io/badge/express%20js-%234ED1C5.svg?style=for-the-badge&logo=expressjs&logoColor=white" align="center" alt="express-js"/>
+   <img src = "https://img.shields.io/badge/mongo%20db-%23323330.svg?style=for-the-badge&logo=mongodb&logoColor=green" align="center" alt="mongo-db"/>
+   <img src = "https://img.shields.io/badge/node%20js-%234ED1C5.svg?style=for-the-badge&logo=node&logoColor=white" align="center" alt="node-js"/>
+   <img src = "https://img.shields.io/badge/express%20js-%23323330.svg?style=for-the-badge&logo=express&logoColor=green" align="center" alt="express-js"/>
    <img src = "https://img.shields.io/badge/jwt%20-%234ED1C5.svg?style=for-the-badge&logo=jwt&logoColor=white" align="center" alt="jwt"/>
 </p>
 
@@ -80,6 +80,9 @@
 
 [![linkedin](https://img.shields.io/badge/mdowaisathar-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/md-owais-athar-a16337a2/)
 [![Github](https://img.shields.io/badge/owii8247-20232A?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/owii8247/)
+
+[![linkedin](https://img.shields.io/badge/kundankumar-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kundan-kumar-keshri-04621b238/)
+[![Github](https://img.shields.io/badge/kundan799-20232A?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/kundan799)
 
 ## Show your support
 <p> Give a ⭐️ if you like this project! </p>
