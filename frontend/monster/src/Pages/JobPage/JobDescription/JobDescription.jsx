@@ -75,7 +75,7 @@ const JobDescription = () => {
 
 
     return (
-        <>
+       <>
 
          <Navbar/>
             <Box w={1000} p={10}>
@@ -252,12 +252,15 @@ const JobDescription = () => {
                 </Grid>
 
             </Box>
-             <Footer/>
+             
+
+
 
 
 
         
         </>
+
     )
 }
 

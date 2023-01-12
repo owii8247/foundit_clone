@@ -89,7 +89,7 @@ const JobsData = () => {
               <EditModal el={el} getData={getData} />
             </Td> */}
             <Td>
-              <Button onClick={() => handleDelete(el.id)} _hover={{bg:"red"}} bg="red" color="white">Delete</Button>
+              <Button onClick={() => handleDelete(el._id)} _hover={{bg:"red"}} bg="red" color="white">Delete</Button>
             </Td>
           </Tr>
         </Tbody>

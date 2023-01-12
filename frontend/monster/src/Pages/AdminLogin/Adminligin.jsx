@@ -44,7 +44,7 @@ const Adminligin = () => {
         isClosable: true,
       });
     navigate("/admindashboard")
- 
+ //
 
       
     } else {
@@ -62,7 +62,7 @@ const Adminligin = () => {
     //
   };
   return (
-    <div>
+   <>
       <Navbar/> 
       <div className={styles.admain}>
         <div className={styles.admin1}>
@@ -135,7 +135,7 @@ const Adminligin = () => {
         </Tabs>
       </div>
       <Footer/>
-    </div>
+    </>
   );
 };
 
