@@ -26,7 +26,7 @@ const Middle = () => {
 
     return (
         <>
-            <Grid templateColumns='repeat(3, 1fr)' gap={12} backgroundColor={"#f7f2f9"}>
+            <Grid templateColumns='repeat(3, 1fr)' gap={14} p={2} backgroundColor={"#f7f2f9"}>
                 <Box>
                     <Image h={300} w={400} src="https://pbs.twimg.com/media/FiZ1mofXgAUK_TW.jpg" />
                 </Box>
@@ -156,6 +156,8 @@ const Middle = () => {
                 </Swiper>
             </Box>
             <Image margin={"auto"} src="https://tpc.googlesyndication.com/simgad/13052027735813034364" />
+            <br />
+            <Image margin={"auto"} src="https://tpc.googlesyndication.com/simgad/111717627635727298" />
             <Box p={10}>
                 <Box p={3} border={"0.1px solid gray"} borderRadius={5}>
                     <Text fontSize={"lg"} fontWeight={"bold"} textAlign={"start"} >Popular Searches</Text>
