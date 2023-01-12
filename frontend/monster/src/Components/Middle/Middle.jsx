@@ -26,7 +26,7 @@ const Middle = () => {
 
     return (
         <>
-            <Grid templateColumns='repeat(3, 1fr)' gap={12} backgroundColor={"#f7f2f9"}>
+            <Grid templateColumns='repeat(3, 1fr)' gap={14} p={2} backgroundColor={"#f7f2f9"}>
                 <Box>
                     <Image h={300} w={400} src="https://pbs.twimg.com/media/FiZ1mofXgAUK_TW.jpg" />
                 </Box>
