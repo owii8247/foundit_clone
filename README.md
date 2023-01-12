@@ -16,6 +16,8 @@
    <img src = "https://img.shields.io/badge/jwt%20-%234ED1C5.svg?style=for-the-badge&logo=jwt&logoColor=white" align="center" alt="jwt"/>
 </p>
 
+![Homepage](https://user-images.githubusercontent.com/100846987/212013783-386a868f-bf89-49d0-a634-34de83f7e010.PNG)
+
 <br/>
 
   ## Pages 
@@ -40,6 +42,25 @@
 - CRUD at Admin Dashboard
 - Logout 
 
+## Glimpses of fountit Clone :
+
+<table>
+
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/100846987/212014518-3f0bd632-580a-49bc-a7eb-a7b7aca19491.PNG" alt="jobpage" /></td>
+    <td><img src="https://user-images.githubusercontent.com/100846987/212014674-c53c40d3-854b-436c-9fb0-8a5e3c4c9669.PNG" alt="jdpage" /></td>
+  </tr>
+
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/100846987/212015218-4b7c98e4-1053-404e-b445-8edf20002071.PNG" alt="popularsearch"/></td>
+    <td><img src="https://user-images.githubusercontent.com/100846987/212015383-5844624f-b105-4e0c-a315-5b2ed0a8c383.PNG"  alt="services" /></td>
+  </tr>
+   
+
+</table>
+
+![footer](https://user-images.githubusercontent.com/100846987/212014395-a883c102-670e-4132-8e58-d64ccdfdf660.PNG)
+
 ## Built with
 - React JS
 - Redux JS
@@ -61,5 +82,5 @@
 [![Github](https://img.shields.io/badge/owii8247-20232A?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/owii8247/)
 
 ## Show your support
-<p> Give a ⭐️ if you like this project! <p/>
+<p> Give a ⭐️ if you like this project! </p>
 <br/>

@@ -1,12 +1,45 @@
-import { Box, Button, Flex, Input, Text } from '@chakra-ui/react'
-import React from 'react'
+import { Box, Button, Flex, Image, Input, Text } from '@chakra-ui/react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import { FaMapMarkerAlt, FaMicrophone, FaSearch } from "react-icons/fa"
 import { TiShoppingBag } from "react-icons/ti"
+import { Link } from 'react-router-dom'
 
 const Search = () => {
-    const handleFilter = () => {
+    const [job, setJobs] = useState([])
+    const [jobData, setjobData] = useState([])
+    const [showBox, setShowBox] = useState(false)
+    const [value, setValue] = useState("")
+
+    useEffect(() => {
+        axios.get(`https://founditbackend-production.up.railway.app/job`).then((res) => {
+            setJobs(res.data)
+        }).catch((err) => {
+            console.log(err)
+        })
+    }, [])
+
+    const handleFilter = (e) => {
+        setValue(e.target.value)
+        const filterResult = job && job.filter(item => item.job_title.toLowerCase().includes(e.target.value.toLowerCase()))
+        setjobData(filterResult)
 
     }
+
+    useEffect(() => {
+        if (value === "") {
+            setShowBox(false)
+        }
+        if (value !== "") {
+            setShowBox(true)
+        }
+    }, [value])
+
+
+
+    //console.log(job)
+
+
     return (
         <>
             <Box backgroundColor={"#f7f2f9"} p={5}>
@@ -34,9 +67,37 @@ const Search = () => {
                     </Box>
 
                     <Box>
-                        <Button fontWeight={"bold"} color={"white"} backgroundColor={"#6e00be"} _hover={{backgroundColor:"#6e00be"}} colorScheme={"blue"} borderRadius={'5px'} padding={"24px 38px"}><Text fontSize={'sm'}>Search</Text></Button>
+
+                        <Button fontWeight={"bold"} color={"white"} backgroundColor={"#6e00be"}
+                            _hover={{ backgroundColor: "#6e00be" }} colorScheme={"blue"}
+                            borderRadius={'5px'} padding={"24px 38px"}
+                            onClick={handleFilter}>
+                            <Text fontSize={'sm'}>Search</Text>
+                        </Button>
+
                     </Box>
                 </Flex>
+
+                {showBox && <Box border={"1px solid purple"} borderRadius={5} w={"25%"} ml={180} p={2} backgroundColor={"white"} overflow={"hidden"} zIndex={"999"} position={"absolute"}>
+
+                    {jobData && jobData.map((item) =>
+
+                        <Box >
+                            <Link to={`/jobs/${item.id}`}>
+                                <Flex p={1} justifyContent={"space-between"}>
+                                    <Box textAlign={"start"}>
+                                        <Text fontWeight={"semibold"} color={"purple"}>{item.job_title}</Text>
+                                        <Text fontSize={"xx-small"}>Job Id : {item._id}</Text>
+                                    </Box>
+                                    <Box h={10} w={20}>
+                                        <Image src={item.image} />
+                                    </Box>
+                                </Flex>
+                            </Link>
+                        </Box>
+                    )}
+                </Box>}
+
             </Box>
         </>
     )
