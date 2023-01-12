@@ -78,9 +78,6 @@ const JobDescription = () => {
         <>
 
          <Navbar/>
-        <Box w={1000} p={10}>
-            <Box  border={"1px solid #6e00be"} textAlign={"start"} p={10} borderRadius={10} mb={5} key={jobData.id}>
-
             <Box w={1000} p={10}>
                 <Box border={"1px solid #6e00be"} textAlign={"start"} p={10} borderRadius={10} mb={5} key={jobData.id}>
 
@@ -210,11 +207,6 @@ const JobDescription = () => {
 
                 </Box>
                
-
-            </Box>
-
-
-
             <Box w={1000} p={10}>
                 <Grid templateColumns='repeat(5, 1fr)' gap={12}>
                     <Box borderRadius={10} border={"1px solid gray"} p={2} backgroundColor={"#fff8eb"}>
@@ -264,6 +256,7 @@ const JobDescription = () => {
 
 
 
+        
         </>
     )
 }
