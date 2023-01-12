@@ -156,6 +156,8 @@ const Middle = () => {
                 </Swiper>
             </Box>
             <Image margin={"auto"} src="https://tpc.googlesyndication.com/simgad/13052027735813034364" />
+            <br />
+            <Image margin={"auto"} src="https://tpc.googlesyndication.com/simgad/111717627635727298" />
             <Box p={10}>
                 <Box p={3} border={"0.1px solid gray"} borderRadius={5}>
                     <Text fontSize={"lg"} fontWeight={"bold"} textAlign={"start"} >Popular Searches</Text>
