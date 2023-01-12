@@ -75,9 +75,9 @@ const JobDescription = () => {
 
 
     return (
-        <>
+       <div>
 
-         <Navbar/>
+         {/* <Navbar/> */}
         <Box w={1000} p={10}>
             <Box  border={"1px solid #6e00be"} textAlign={"start"} p={10} borderRadius={10} mb={5} key={jobData.id}>
 
@@ -260,11 +260,11 @@ const JobDescription = () => {
                 </Grid>
 
             </Box>
-             <Footer/>
+             
 
 
 
-        </>
+            </div>
     )
 }
 
