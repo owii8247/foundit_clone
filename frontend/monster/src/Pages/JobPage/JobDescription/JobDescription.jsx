@@ -24,6 +24,9 @@ const JobDescription = () => {
     const location = useLocation()
     const toast = useToast()
 
+    const[show,setShow] = useState(true)
+    const[follow,setFollow] = useState(true)
+
 
     const colors = useColorModeValue(
         ['#f9f7fb', '#f9f7fb', '#f9f7fb',],
@@ -64,14 +67,29 @@ const JobDescription = () => {
     }
 
     const handleApply = () => {
+            toast({
+                title: `Your application has been received. We will review your application and respond within the next 48 hours.`,
+                position: "top",
+                isClosable: true,
+                status: 'success'
+            })
+            setShow(!show)
+  
+    }
 
+    const handleFollow = () => {
         toast({
-            title: `Your application has been received. We will review your application and respond within the next 48 hours.`,
+            title: `Thank You for following Company Profile.`,
             position: "top",
             isClosable: true,
             status: 'success'
         })
-    }
+        setFollow(!follow)
+
+}
+
+  
+    
 
 
     return (
@@ -126,8 +144,8 @@ const JobDescription = () => {
                         </Box>
                         <Box>
                             <Button colorScheme='blue' color={"white"} backgroundColor={"#6e00be"} _hover={{ backgroundColor: "#6e00be" }}
-                                onClick={handleApply}
-                            >Apply Now</Button>
+                            onClick={handleApply}
+                            >{show ? "Apply Now": "Applied"}</Button>
                         </Box>
                     </Flex>
                 </Box>
@@ -197,7 +215,8 @@ const JobDescription = () => {
                                 <Flex justifyContent={"space-between"} gap={5}>
                                     <Box><Text textAlign={"justify"}>{jobData.company_description}</Text></Box>
 
-                                    <Button colorScheme='blue' color={"#6e00be"} variant='outline' pl={10} pr={10}>Follow</Button>
+                                    <Button colorScheme='blue' color={"#6e00be"} variant='outline' pl={10} pr={10} onClick={handleFollow}>
+                                        {follow ? "Follow": "Following"}</Button>
                                 </Flex>
                             </TabPanel>
                         </TabPanels>

@@ -21,6 +21,8 @@ const JobPageLeft = () => {
     let end = page * perPage
     let start = end - perPage
     let paginationData = job.slice(start, end)
+    //console.log("pagination",paginationData)
+
 
     useEffect(() => {
         if (location || job.length === 0) {
@@ -50,9 +52,11 @@ const JobPageLeft = () => {
             <Box w={500} ml={35}>
                 {paginationData.length > 0 &&
                     paginationData.map((item) => {
+                        
                         return (
                             <Link to={`/jobs/${item.id}`}>
-                                <Box border={"1px solid gray"} textAlign={"start"} p={5} _hover={{ border: "1px solid #6e00be", backgroundColor: "#f9f7fb" }} borderRadius={10} mb={5} key={item.id}>
+                                <Box border={"1px solid gray"} textAlign={"start"} p={5} 
+                                _hover={{ border: "1px solid #6e00be", backgroundColor: "#f9f7fb" }} borderRadius={10} mb={5} key={item.id}>
                                     <Text fontWeight={"semibold"}>{item.job_title}</Text>
                                     <Box color={"gray"}>
                                         <Text >{item.company_name}</Text><br />
