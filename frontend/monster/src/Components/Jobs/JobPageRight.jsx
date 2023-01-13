@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { getJobs } from '../../Redux/app/action'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useLocation, useSearchParams } from 'react-router-dom'
@@ -16,6 +16,8 @@ const JobPageRight = () => {
   const dispatch = useDispatch()
   const location = useLocation()
   const toast = useToast()
+
+ 
 
   useEffect(() => {
     if (location || job.length === 0) {
@@ -41,15 +43,16 @@ const JobPageRight = () => {
     })
   }
 
-  const handleApply=()=>{
+//   const handleApply=()=>{
         
-    toast({
-        title: `Your application has been received. We will review your application and respond within the next 48 hours.`,
-        position: "top",
-        isClosable: true,
-        status: 'success'
-    })
-}
+//     toast({
+//         title: `Your application has been received. We will review your application and respond within the next 48 hours.`,
+//         position: "top",
+//         isClosable: true,
+//         status: 'success'
+//     })
+    
+// }
 
   return (
     <>
@@ -58,7 +61,8 @@ const JobPageRight = () => {
           job.map((item) => {
             return (
               <>
-                <Box border={"1px solid gray"} _hover={{ border: "1px solid #6e00be", backgroundColor: "#f9f7fb" }} textAlign={"start"} p={10} borderRadius={10} mb={5} key={item.id}>
+                <Box border={"1px solid gray"} _hover={{ border: "1px solid #6e00be", backgroundColor: "#f9f7fb" }}
+                 textAlign={"start"} p={10} borderRadius={10} mb={5} key={item.id}>
                   <Flex justifyContent={"space-between"}>
                     <Text fontWeight={"semibold"}>{item.job_title}</Text>
                     <Link to={`/jobs/${item.id}`}><Button color={"blue"} fontSize={"xs"} variant={"link"}><FiExternalLink />View Full Page</Button></Link>
@@ -104,11 +108,11 @@ const JobPageRight = () => {
                       <Button ml={5} colorScheme='blue' color={"#6e00be"} variant='outline'><AiOutlineSend />{item.applied} Applied</Button>
                       <Button ml={5} colorScheme='blue' color={"#6e00be"} variant='outline'>Send Similar Jobs</Button>
                     </Box>
-                    <Box>
-                      <Button colorScheme='blue' color={"white"} backgroundColor={"#6e00be"} _hover={{backgroundColor:"#6e00be"}}
-                      onClick={handleApply}
-                      >Apply Now</Button>
-                    </Box>
+                    {/* <Box>
+                    <Button colorScheme='blue' color={"white"} backgroundColor={"#6e00be"} _hover={{ backgroundColor: "#6e00be" }}
+                            onClick={handleApply}>Apply Now
+                            </Button>
+                    </Box> */}
                   </Flex>
                   <br />
                   <Box border={"1px solid #6e00be"} textAlign={"start"} p={10} borderRadius={10} mb={5}>
