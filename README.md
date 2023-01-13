@@ -21,20 +21,20 @@
 <br/>
 
   ## Pages 
-   - Homepage
-   - Login 
-   - SignUp 
-   - Admin Page
-   - Admin Dashboard
+   - Homepage 
    - Job Page
    - Job Description
+   - Admin Page
+   - Admin Dashboard
+   
 <br />
 
 ## 🚀 Features
 
-- Sign up and Login with authentication(JWT)
+- Sign up and Login Sidebar with authentication(JWT)
 - Authentication 
 - Job Page
+- Job Description Page
 - Filteration through multiple options
 - Admin Dashboard
 - Job Posting
@@ -47,16 +47,35 @@
 <table>
 
   <tr>
+    <td><img src="https://user-images.githubusercontent.com/100846987/212404568-5415d81e-3b3b-45ba-a247-e7ecb65dedf4.PNG" alt="register" /></td>
+    <td><img src="https://user-images.githubusercontent.com/100846987/212404682-2f8f437b-9079-4966-a88e-3f7b401ccdf2.PNG" alt="login" /></td>
+  </tr>
+  
+  <tr>
     <td><img src="https://user-images.githubusercontent.com/100846987/212014518-3f0bd632-580a-49bc-a7eb-a7b7aca19491.PNG" alt="jobpage" /></td>
     <td><img src="https://user-images.githubusercontent.com/100846987/212014674-c53c40d3-854b-436c-9fb0-8a5e3c4c9669.PNG" alt="jdpage" /></td>
   </tr>
-
+  
   <tr>
     <td><img src="https://user-images.githubusercontent.com/100846987/212015218-4b7c98e4-1053-404e-b445-8edf20002071.PNG" alt="popularsearch"/></td>
     <td><img src="https://user-images.githubusercontent.com/100846987/212015383-5844624f-b105-4e0c-a315-5b2ed0a8c383.PNG"  alt="services" /></td>
   </tr>
+  
+   <tr>
+    <td><img src="https://user-images.githubusercontent.com/100846987/212404951-1227a611-e7dc-4ff3-96fa-b4e1eb9d1b11.PNG" alt="adminlogin"/></td>
+    <td><img src="https://user-images.githubusercontent.com/100846987/212405116-eadfa5a3-1834-422a-96bb-7f8cd2ac0a8a.PNG"  alt="admindashboard" /></td>
+  </tr>
+  
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/100846987/212405307-beef190e-e63a-49fc-93c5-970bcbb8c03d.PNG" alt="userdashboard"/></td>
+    <td><img src="https://user-images.githubusercontent.com/100846987/212405429-2c5bd054-1aa0-4a04-b57f-00c931769ac6.PNG"  alt="jobsdashboard" /></td>
+  </tr>
+ 
+   <tr>
+   <td><img src="https://user-images.githubusercontent.com/100846987/212405862-241a3fb5-1123-4f2b-84ff-894b79d802ab.PNG" alt="postmodal" /></td>
+   <td><img src="https://user-images.githubusercontent.com/100846987/212014518-3f0bd632-580a-49bc-a7eb-a7b7aca19491.PNG" alt="jobpage" /></td>
+   </tr>
    
-
 </table>
 
 ![footer](https://user-images.githubusercontent.com/100846987/212014395-a883c102-670e-4132-8e58-d64ccdfdf660.PNG)
