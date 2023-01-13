@@ -187,11 +187,11 @@ const DrowerLogin = () => {
                 >
                   {" "}
                   <AiFillLinkedin size="30px" color="bloe" /> Login With
-                  Facebook{" "}
+                  LinkedIn{" "}
                 </Text>
               </Box>
 
-              <Box border="1px solid grey" height="200px">
+              <Box border="1px solid grey" height="200px" padding="5px" borderRadius={5}>
                 <Text fontSize="3xl" textAlign={"center"}>
                   New to foundit?{" "}
                 </Text>
@@ -204,8 +204,8 @@ const DrowerLogin = () => {
                 <DrowerRegiser />
               </Box>
 
-              <Box border="1px solid grey" height="150px">
-                <Text textAlign={"center"}>
+              <Box border="1px solid grey" height="150px" borderRadius={5}>
+                <Text textAlign={"center"} mt="8px">
                   Your dream job is a click away! Get the app on
                 </Text>
                 <Text textAlign={"center"}>your mobile.</Text>
@@ -217,13 +217,6 @@ const DrowerLogin = () => {
               </Box>
             </Stack>
           </DrawerBody>
-
-          <DrawerFooter borderTopWidth="1px">
-            <Button variant="outline" mr={3} onClick={onClose}>
-              Cancel
-            </Button>
-            <Button colorScheme="blue">Submit</Button>
-          </DrawerFooter>
         </DrawerContent>
       </Drawer>
     </div>

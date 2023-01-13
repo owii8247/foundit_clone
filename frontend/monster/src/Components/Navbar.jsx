@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Menu, MenuButton, MenuItem, MenuList, Text, useDisclosure } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Navigate, useNavigate } from "react-router-dom";
@@ -11,6 +11,8 @@ import Userdetails from "./Userdetails";
 
 const Navbar = () => {
   let token=localStorage.getItem("usertoken")
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const handlogout=()=>{
@@ -39,9 +41,29 @@ const Navbar = () => {
       
         />
       
-        <Text fontSize="lg" as="b" mt="10px"  cursor="pointer" >
+        <Text fontSize="lg" as="b" mt="10px"  cursor="pointer" onMouseOver={""} >
           Job Search
         </Text>
+        {/* <Flex justify="center" mt={6} minH="100vh">
+        <Menu isOpen={isOpen} onClose={onClose} bg="black">
+          <MenuButton
+            onMouseOver={onOpen}
+            
+             as={Button}
+            // rightIcon={<ChevronDownIcon />}
+          >
+            Actions
+          </MenuButton>
+          <MenuList onMouseOut={onClose}>
+            <MenuItem>Download</MenuItem>
+            <MenuItem>Create a Copy</MenuItem>
+            <MenuItem>Mark as Draft</MenuItem>
+            <MenuItem>Delete</MenuItem>
+            <MenuItem>Attend a Workshop</MenuItem>
+          </MenuList>
+        </Menu>
+      </Flex> */}
+
         <Text fontSize="lg" as="b" mt="10px" cursor="pointer">
           Career Tips
         </Text>
@@ -61,7 +83,7 @@ const Navbar = () => {
         }
         
         <Button  colorScheme='blue'  color={"#6e00be"}  variant='outline' onClick={handleadmin}>
-        Employers Login
+        Admin Login
       </Button>
     
       </div>

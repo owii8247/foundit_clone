@@ -1,6 +1,8 @@
-import { Image, Text } from "@chakra-ui/react";
+import { Box, Image, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Footer from "../../Components/Footer";
+import Navbar from "../../Components/Navbar";
 
 const Service1 = () => {
   const [data, setData] = useState({});
@@ -24,21 +26,27 @@ const Service1 = () => {
   }, []);
   return (
     <div>
-      <Image src={data.Avatar} width="100%" />
-      <Text fontSize={"5xl"} textAlign="left" ml="40px">
+      <Navbar/>
+      <Box w="80%"  m="auto">
+      <Image src={data.Avatar} width="100%" style={{ objectFit:"contain"}}/>
+      <Box padding={"20px"}  >
+      <Text fontSize={"5xl"} textAlign="left" >
         {data.name}
       </Text>
-      <br />
-      <Text textAlign="left" ml="40px">
+     
+      <Text textAlign="left" mt="20px" >
         {data.desc1}
       </Text>
-      <Text textAlign="left" ml="40px" mt="20px" mr="40px">
+      <Text textAlign="left"  mt="20px" >
         {data.desc2}
       </Text>
-      <Text textAlign="left" ml="40px" mt="20px">
+      <Text textAlign="left"  mt="20px">
         {data.desc3}
       </Text>
+      </Box>
+      </Box>
       <br />
+      <Footer/>
     </div>
   );
 };

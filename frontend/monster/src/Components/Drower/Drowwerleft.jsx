@@ -76,22 +76,22 @@ const Drowwerleft = () => {
           </DrawerHeader>
 
           <DrawerBody>
-            <Flex gap={3} ml="13px">
+            <Flex gap={3} ml="15px">
               <CgProfile size="30px" color="#6e00be" />
-              <Text fontSize={"2xl"} as="bold" mt={-1} color="#6e00be">
+              <Text fontSize={"2xl"} as="b" mt={-1} color="#6e00be" cursor={"pointer"}>
                 Login
               </Text>
             </Flex>
 
-            <Flex gap={3} mt="10px" ml="13px">
+            <Flex gap={3} mt="10px" ml="15px">
               <AiOutlineFileSearch size="30px" color="#6e00be" />
-              <Text fontSize={"2xl"} as="bold" mt={-1} color="#6e00be">
+              <Text fontSize={"2xl"} as="b" mt={-1} color="#6e00be" cursor={"pointer"}>
                 Job Search
               </Text>
             </Flex>
-            <Flex gap={3} mt="10px" ml="13px">
+            <Flex gap={3} mt="10px" ml="15px">
               <HiBellAlert size="30px" color="#6e00be" />
-              <Text fontSize={"2xl"} as="bold" mt={-1} color="#6e00be">
+              <Text fontSize={"2xl"} as="b" mt={-1} color="#6e00be" cursor={"pointer"}>
                 {" "}
                 New Job Alert
               </Text>
@@ -118,19 +118,19 @@ const Drowwerleft = () => {
                         <AiOutlineFileSearch size="30px" color="#6e00be" />
                         <Text
                           fontSize={"2xl"}
-                          as="bold"
+                          as="b"
                           mt={-1}
                           color="#6e00be"
                         >
                           {" "}
-                          Jobs Catgorier
+                          Jobs Categories
                         </Text>
                       </Flex>
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
-                <AccordionPanel pb={4} textAlign={"start"} fontSize="xs">
+                <AccordionPanel pb={4} textAlign={"start"} fontSize={"lg"}  color="#6e00be">
                   <List>
                     <ListItem>HR</ListItem>
                     <ListItem>Sales</ListItem>
@@ -163,7 +163,7 @@ const Drowwerleft = () => {
                         <AiOutlineContacts size="30px" color="#6e00be" />
                         <Text
                           fontSize={"2xl"}
-                          as="bold"
+                          as="b"
                           mt={-1}
                           color="#6e00be"
                         >
@@ -175,7 +175,7 @@ const Drowwerleft = () => {
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
-                <AccordionPanel pb={4} textAlign={"start"} fontSize="xs">
+                <AccordionPanel pb={4} textAlign={"start"}  fontSize={"lg"}  color="#6e00be">
                   <List>
                     <ListItem>HR</ListItem>
                     <ListItem>Sales</ListItem>
@@ -208,7 +208,7 @@ const Drowwerleft = () => {
                         <SlBadge size="30px" color="#6e00be" />
                         <Text
                           fontSize={"2xl"}
-                          as="bold"
+                          as="b"
                           mt={-1}
                           color="#6e00be"
                         >
@@ -220,7 +220,7 @@ const Drowwerleft = () => {
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
-                <AccordionPanel pb={4} textAlign={"start"} fontSize="xs">
+                <AccordionPanel pb={4} textAlign={"start"} fontSize={"lg"}  color="#6e00be">
                   <List>
                     <ListItem>HR</ListItem>
                     <ListItem>Sales</ListItem>
@@ -253,7 +253,7 @@ const Drowwerleft = () => {
                         <AiOutlineFileSearch size="30px" color="#6e00be" />
                         <Text
                           fontSize={"2xl"}
-                          as="bold"
+                          as="b"
                           mt={-1}
                           color="#6e00be"
                         >
@@ -265,7 +265,7 @@ const Drowwerleft = () => {
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
-                <AccordionPanel pb={4} textAlign={"start"} fontSize="xs">
+                <AccordionPanel pb={4} textAlign={"start"} fontSize={"lg"}  color="#6e00be">
                   <List>
                     <ListItem>HR</ListItem>
                     <ListItem>Sales</ListItem>
@@ -279,7 +279,7 @@ const Drowwerleft = () => {
 
             <Flex gap={3} mt="10px" ml="13px">
               <HiDownload size="30px" color="#6e00be" />
-              <Text fontSize={"2xl"} as="bold" mt={-1} color="#6e00be">
+              <Text fontSize={"2xl"} as="b" mt={-1} color="#6e00be">
                 {" "}
                 DownLoad App
               </Text>
@@ -298,13 +298,6 @@ const Drowwerleft = () => {
               </Text>
             </Flex>
           </DrawerBody>
-
-          <DrawerFooter>
-            <Button variant="outline" mr={3} onClick={onClose}>
-              Cancel
-            </Button>
-            <Button colorScheme="blue">Save</Button>
-          </DrawerFooter>
         </DrawerContent>
       </Drawer>
     </div>

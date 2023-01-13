@@ -13,6 +13,7 @@ import Service1 from '../Pages/AdminLogin/Service1'
 import Userdetails from '../Components/Userdetails'
 import JobsData from '../Pages/AdminDashboard/JobsData'
 import Userdata from '../Pages/AdminDashboard/Userdata'
+import RequiredAuth from '../hoc/RequiredAuth'
 
 
 const AllRoutes = () => {
@@ -27,11 +28,19 @@ const AllRoutes = () => {
             <Route path="/user/login" element={<Login />}/>
             <Route path="/user/signup" element={<Signup />}/>
             <Route path="/adminlogin" element={<AdminLogin />}/>
-            <Route path="/jobs" element={<JobPage />}/>
-            <Route path="/jobs/:id" element={<JobDescription />}/>
+            <Route path="/jobs" element={
+            
+            <JobPage />
+            
+            }/>
+            <Route path="/jobs/:id" element={
+              <RequiredAuth>
+            <JobDescription />
+            </RequiredAuth>
+            }/>
             <Route path="/admindashboard" element={<AdminDashboard />}/>
-            <Route path="/jobsdata" element={<JobsData/>}/>
-            <Route path="/userdata" element={<Userdata/>}/>
+            <Route path="/admindashbord/jobsdata" element={<JobsData/>}/>
+            <Route path="/admindashbord/userdata" element={<Userdata/>}/>
         </Routes>
     </div>
   )
