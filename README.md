@@ -73,8 +73,11 @@
  
    <tr>
    <td><img src="https://user-images.githubusercontent.com/100846987/212405862-241a3fb5-1123-4f2b-84ff-894b79d802ab.PNG" alt="postmodal" /></td>
-   <td><img src="https://user-images.githubusercontent.com/100846987/212014518-3f0bd632-580a-49bc-a7eb-a7b7aca19491.PNG" alt="jobpage" /></td>
+   <td><img src="https://user-images.githubusercontent.com/100846987/212459270-e62d3bd1-d9ff-4b83-9fb2-bfb3d9c32734.PNG" alt="search" /></td>
    </tr>
+   
+   
+
    
 </table>
 
