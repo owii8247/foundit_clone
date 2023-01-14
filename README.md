@@ -27,7 +27,7 @@
    - Admin Page
    - Admin Dashboard
    
-<br />
+
 
 ## 🚀 Features
 
@@ -41,6 +41,8 @@
 - User Accessibility at Admin Dashboard
 - CRUD at Admin Dashboard
 - Logout 
+
+<br />
 
 ## Glimpses of fountit Clone :
 
@@ -73,12 +75,12 @@
  
    <tr>
    <td><img src="https://user-images.githubusercontent.com/100846987/212405862-241a3fb5-1123-4f2b-84ff-894b79d802ab.PNG" alt="postmodal" /></td>
-   <td><img src="https://user-images.githubusercontent.com/100846987/212459270-e62d3bd1-d9ff-4b83-9fb2-bfb3d9c32734.PNG" alt="search" /></td>
+   <td><img src="https://user-images.githubusercontent.com/100846987/212459441-5db80874-3de8-45ba-9ba2-bb9da0a9a814.PNG" alt="search" /></td>
    </tr>
    
    
 
-   
+
 </table>
 
 ![footer](https://user-images.githubusercontent.com/100846987/212014395-a883c102-670e-4132-8e58-d64ccdfdf660.PNG)
