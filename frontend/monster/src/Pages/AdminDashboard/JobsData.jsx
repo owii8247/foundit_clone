@@ -33,7 +33,7 @@ const JobsData = () => {
     console.log(id);
 
     axios
-      .delete(`https://founditbackend-production.up.railway.app/job/${id}`)
+      .delete(`https://foundit-backend-qu3p.onrender.com/job/${id}`)
       .then(() => dispatch(getJobs()))
       .then(() =>
         toast({

@@ -49,7 +49,7 @@ const JobPost = () => {
     // .then((res)=>{
 
     // })
-    fetch("https://founditbackend-production.up.railway.app/job/create", {
+    fetch("https://foundit-backend-qu3p.onrender.com/job/create", {
       method: "POST",
       body: JSON.stringify(usercred),
 

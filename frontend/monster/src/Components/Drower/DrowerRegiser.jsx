@@ -37,7 +37,7 @@ const DrowerRegiser = () => {
   const handlesubmit = (e) => {
     e.preventDefault();
     console.log(data)
-    fetch("https://founditbackend-production.up.railway.app/user/signup", {
+    fetch("https://foundit-backend-qu3p.onrender.com/user/signup", {
       method: "POST",
       body: JSON.stringify(data),
 

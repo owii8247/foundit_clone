@@ -26,7 +26,7 @@ const Userdata = () => {
   const [user,setUser]=useState([])
 
   const getUser=()=>{
-    axios.get("https://founditbackend-production.up.railway.app/user")
+    axios.get("https://foundit-backend-qu3p.onrender.com/user")
 
     .then((res)=>{
       setUser(res.data)
@@ -38,7 +38,7 @@ const Userdata = () => {
     console.log(id);
 
     axios
-      .delete(`https://founditbackend-production.up.railway.app/user/${id}`)
+      .delete(`https://foundit-backend-qu3p.onrender.com/user/${id}`)
       .then(() => getUser())
       .then(() =>
         toast({
