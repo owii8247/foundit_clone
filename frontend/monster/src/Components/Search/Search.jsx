@@ -12,7 +12,7 @@ const Search = () => {
     const [value, setValue] = useState("")
 
     useEffect(() => {
-        axios.get(`https://founditbackend-production.up.railway.app/job`).then((res) => {
+        axios.get(`https://foundit-backend-qu3p.onrender.com/job`).then((res) => {
             setJobs(res.data)
         }).catch((err) => {
             console.log(err)

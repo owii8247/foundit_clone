@@ -89,6 +89,7 @@ const Adminligin = () => {
                 borderBottom={"1px solid grey"}
                 borderRadius="none"
                 name="password"
+                type="password"
                 onChange={handlechange}
                 required
               />
