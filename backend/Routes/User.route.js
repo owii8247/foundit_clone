@@ -4,6 +4,22 @@ const userController = Router();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken")
 
+
+
+
+//get
+userController.get("/", async (req, res) => {
+  console.log(req.query)
+  const query = req.query
+
+  const user = await userModel.find(query)
+
+  res.send(user)
+
+})
+
+//signup
+
 userController.post("/signup", async (req, res) => {
   const { email, password ,name,mobile,work_status} = req.body;
   const existing_user = await userModel.findOne({ email });
@@ -30,6 +46,7 @@ userController.post("/signup", async (req, res) => {
   });
 });
 
+//login
 
 userController.post("/login", async (req, res) => {
     const {email, password} = req.body
@@ -71,6 +88,28 @@ userController.post("/login", async (req, res) => {
       res.send({"Message":"User not found ..please login with correct credentials.."})
     }
 })
+
+
+ // delete
+ userController.delete("/:id",async(req, res)=>{
+  try{
+  const deletedata = await userModel.findByIdAndDelete(req.params.id);
+  res.send(deletedata)
+  }catch(e){
+      res.send(e.message)
+  }
+});
+
+// patch
+userController.patch("/:id",async(req, res)=>{
+  try{
+    const  _id=req.params.id
+  const updatdata = await userModel.findByIdAndUpdate(_id,req.body,{new:true});
+  res.send(updatdata)
+  }catch(err){
+    res.status(400).send(e.message);
+  }
+});
 
 
 
