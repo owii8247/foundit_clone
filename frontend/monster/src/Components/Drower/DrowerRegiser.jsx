@@ -166,6 +166,7 @@ const DrowerRegiser = () => {
                   placeholder="Enter Password"
                   size="lg"
                   name="password"
+                  type="password"
                   onChange={handlechange}
                   required
                 />
@@ -178,6 +179,7 @@ const DrowerRegiser = () => {
                   placeholder="Mobile No"
                   size="lg"
                   name="mobile"
+                  maxLength="10"
                   onChange={handlechange}
                   required
                 />
