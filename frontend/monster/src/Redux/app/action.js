@@ -12,7 +12,7 @@ export const getJobs = (params) => (dispatch) => {
       dispatch({ type: types.GET_JOBS_FAILURE, payload: err });
     });
 };
-//https://foundit-backend-qu3p.onrender.com
+
 export const getJobsDescription = (id) => (dispatch) => {
   dispatch({ type: types.GET_JOBS_REQUEST });
   return axios
