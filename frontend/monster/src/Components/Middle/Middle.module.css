@@ -1,0 +1,13 @@
+.main{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+
+@media all and (min-width:381px) and (max-width:720px){
+    .main{
+        display: grid;
+        grid-template-columns: repeat(1,fr);
+        border: 5px solid red;
+    }
+}

@@ -1,7 +1,7 @@
 import {
     Box, Button, Flex, Grid, Heading, Image,
     Modal, ModalBody, ModalCloseButton, ModalContent,
-    ModalFooter, ModalHeader, ModalOverlay, Text, useDisclosure
+    ModalFooter, ModalHeader, ModalOverlay, Text, useDisclosure,useToast
 } from '@chakra-ui/react'
 import React, { useCallback } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -21,12 +21,22 @@ const Middle = () => {
     }, []);
 
     const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
+    const toast = useToast()
 
+    const handleSubmit = () => {
+        toast({
+            title: `Thank You for Submitting your Resume.`,
+            position: "top",
+            isClosable: true,
+            status: 'success'
+        })
+        
 
+}
 
     return (
         <>
-            <Grid templateColumns='repeat(3, 1fr)' gap={14} p={2} backgroundColor={"#f7f2f9"}>
+            <Grid  templateColumns='repeat(3, 1fr)' gap={14} p={2} backgroundColor={"#f7f2f9"}>
                 <Box>
                     <Image h={300} w={400} src="https://pbs.twimg.com/media/FiZ1mofXgAUK_TW.jpg" />
                 </Box>
@@ -71,7 +81,7 @@ const Middle = () => {
                                 </ModalBody>
                                 <ModalFooter>
 
-                                    <Button color={"#6e00be"} variant={"outline"} colorScheme={"blue"}>Submit</Button>
+                                    <Button color={"#6e00be"} variant={"outline"} colorScheme={"blue"} onClick={handleSubmit}>Submit</Button>
                                 </ModalFooter>
                             </ModalContent>
                         </Modal>
@@ -159,6 +169,7 @@ const Middle = () => {
             <br />
             <Image margin={"auto"} src="https://tpc.googlesyndication.com/simgad/111717627635727298" />
             <Box p={10}>
+                <Link to="/jobs">
                 <Box p={3} border={"0.1px solid gray"} borderRadius={5}>
                     <Text fontSize={"lg"} fontWeight={"bold"} textAlign={"start"} >Popular Searches</Text>
                     <Flex color={"#6e00be"} justifyContent={"space-around"} p={5}>
@@ -180,6 +191,7 @@ const Middle = () => {
                         <Button variant={"outline"} borderRadius={20} backgroundColor={"#f7f2f9"}>Banking</Button>
                     </Flex>
                 </Box>
+                </Link>
             </Box>
             <Box p={10}>
 
